@@ -1,87 +1,100 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey Website</title>
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f2f5f9;
-            text-align: center;
-            padding: 40px;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
         }
 
-        .box {
-            background: white;
-            width: 400px;
-            margin: auto;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px #ccc;
+        body{
+            background:linear-gradient(135deg,#2563eb,#4f46e5);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
         }
 
-        h1 {
-            color: #2563eb;
+        .container{
+            background:#fff;
+            width:420px;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 10px 25px rgba(0,0,0,0.2);
+            text-align:center;
         }
 
-        p {
-            color: #555;
+        h1{
+            color:#2563eb;
+            margin-bottom:10px;
         }
 
-        button {
-            background: #2563eb;
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
+        p{
+            color:#666;
+            margin-bottom:20px;
         }
 
-        button:hover {
-            background: #1d4ed8;
+        input{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:8px;
         }
 
-        input {
-            width: 90%;
-            padding: 10px;
-            margin: 8px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
+        .radio-group{
+            text-align:left;
+            margin:15px 0;
+        }
+
+        .radio-group label{
+            display:block;
+            margin:8px 0;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#2563eb;
+            color:white;
+            border:none;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#1d4ed8;
         }
     </style>
 </head>
 
 <body>
 
-<div class="box">
+<div class="container">
 
-<h1>Welcome to Our Survey</h1>
+<h1>Welcome to Our Survey Website</h1>
 
-<p>Your opinion helps us improve our services.</p>
+<p>Please complete this short survey.</p>
 
 <input type="text" placeholder="Enter your name">
 
-<br>
-
 <input type="email" placeholder="Enter your email">
 
-<br><br>
+<div class="radio-group">
+    <p><b>How satisfied are you?</b></p>
 
-<p>How satisfied are you?</p>
-
-<label>
-<input type="radio" name="rate"> Good
-</label>
-
-<label>
-<input type="radio" name="rate"> Average
-</label>
-
-<label>
-<input type="radio" name="rate"> Poor
-</label>
-
-<br><br>
+    <label><input type="radio" name="rating"> Excellent</label>
+    <label><input type="radio" name="rating"> Good</label>
+    <label><input type="radio" name="rating"> Average</label>
+    <label><input type="radio" name="rating"> Poor</label>
+</div>
 
 <button>Submit Survey</button>
 
