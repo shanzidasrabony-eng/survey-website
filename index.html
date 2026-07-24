@@ -1,23 +1,91 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Survey Reject Help</title>
+    <title>Survey Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f5f9;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .box {
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #ccc;
+        }
+
+        h1 {
+            color: #2563eb;
+        }
+
+        p {
+            color: #555;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Survey Reject হলে কী করবেন?</h1>
 
-    <h2>পরবর্তী ধাপ:</h2>
+<div class="box">
 
-    <ul>
-        <li>Reject হওয়ার কারণ দেখুন</li>
-        <li>একই survey বারবার চেষ্টা করবেন না</li>
-        <li>Profile information ঠিক রাখুন</li>
-        <li>পরের available survey চেষ্টা করুন</li>
-        <li>Question মনোযোগ দিয়ে উত্তর দিন</li>
-    </ul>
+<h1>Welcome to Our Survey</h1>
 
-    <h3>Survey Tips</h3>
-    <p>সবসময় সঠিক ও consistent তথ্য দিন।</p>
+<p>Your opinion helps us improve our services.</p>
+
+<input type="text" placeholder="Enter your name">
+
+<br>
+
+<input type="email" placeholder="Enter your email">
+
+<br><br>
+
+<p>How satisfied are you?</p>
+
+<label>
+<input type="radio" name="rate"> Good
+</label>
+
+<label>
+<input type="radio" name="rate"> Average
+</label>
+
+<label>
+<input type="radio" name="rate"> Poor
+</label>
+
+<br><br>
+
+<button>Submit Survey</button>
+
+</div>
 
 </body>
 </html>
