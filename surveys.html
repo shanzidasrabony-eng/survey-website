@@ -1,116 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Survey List</title>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+body{
 font-family:Arial,sans-serif;
+background:#f4f7fb;
+margin:0;
 }
 
-body{
-background:#f4f4f4;
-}
 
 header{
-background:#0066cc;
+background:linear-gradient(135deg,#0066cc,#003366);
 color:white;
-padding:20px;
+padding:30px;
 text-align:center;
 }
 
+
 nav{
-background:#004c99;
-padding:12px;
+background:#003366;
+padding:15px;
 text-align:center;
 }
+
 
 nav a{
 color:white;
 text-decoration:none;
-margin:0 15px;
+margin:15px;
 font-weight:bold;
 }
+
 
 .container{
 width:90%;
-max-width:1000px;
+max-width:1100px;
 margin:30px auto;
 }
 
-#searchInput{
+
+.search{
 width:100%;
-padding:12px;
-font-size:16px;
+padding:15px;
+font-size:17px;
+border-radius:10px;
 border:1px solid #ccc;
-border-radius:8px;
-margin-bottom:20px;
 }
 
-table{
-width:100%;
-border-collapse:collapse;
+
+.card{
+
 background:white;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+margin-top:20px;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px #ddd;
+
 }
 
-th{
-background:#0066cc;
-color:white;
-padding:15px;
+
+.card h2{
+color:#0066cc;
 }
 
-td{
-padding:15px;
-border-bottom:1px solid #ddd;
+
+.number{
+
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+
 }
 
-tr:hover{
-background:#f2f8ff;
+
+.box{
+
+background:#f1f6ff;
+padding:10px;
+border-radius:8px;
+font-weight:bold;
+
 }
+
 
 .reject{
 color:red;
-font-weight:bold;
 }
+
+
+.review{
+color:orange;
+}
+
 
 .good{
 color:green;
-font-weight:bold;
 }
 
-.careful{
-color:orange;
-font-weight:bold;
-}
 
 footer{
+
 background:#222;
 color:white;
-text-align:center;
 padding:15px;
+text-align:center;
 margin-top:40px;
+
 }
 
 </style>
 
 </head>
 
+
 <body>
+
 
 <header>
 
 <h1>Survey Reject</h1>
 
-<p>Search survey information easily</p>
+<p>Search survey quality information</p>
 
 </header>
+
 
 <nav>
 
@@ -122,78 +142,139 @@ margin-top:40px;
 
 </nav>
 
+
+
 <div class="container">
 
-<input
-type="text"
-id="searchInput"
-placeholder="🔍 Search Survey...">
 
-<table id="surveyTable">
+<input 
+class="search"
+id="search"
+placeholder="🔍 Search Survey Account...">
 
-<tr>
 
-<th>Survey</th>
 
-<th>Status</th>
+<div id="list">
 
-<th>Reason</th>
 
-</tr>
+<div class="card">
 
-<tr>
+<h2>Lucid Marketplace Services</h2>
 
-<td>Temu Survey</td>
+<div class="number">
 
-<td class="reject">Reject</td>
+<div class="box">
+Count: 95
+</div>
 
-<td>High disqualification</td>
-
-</tr>
-
-<tr>
-
-<td>Amazon Survey</td>
-
-<td class="good">Good</td>
-
-<td>Usually completes</td>
-
-</tr>
-
-<tr>
-
-<td>Lottery Survey</td>
-
-<td class="careful">Careful</td>
-
-<td>Profile mismatch</td>
-
-</tr>
-
-<tr>
-
-<td>Casino Survey</td>
-
-<td class="reject">Reject</td>
-
-<td>Very low success rate</td>
-
-</tr>
-
-<tr>
-
-<td>Shopping Survey</td>
-
-<td class="good">Good</td>
-
-<td>Easy to complete</td>
-
-</tr>
-
-</table>
+<div class="box">
+Percentage: 14.6%
+</div>
 
 </div>
+
+<p class="reject">
+Status: Review
+</p>
+
+<p>
+Reason: Poor Quality Open-End
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>GfK</h2>
+
+<div class="number">
+
+<div class="box">
+Count: 120
+</div>
+
+<div class="box">
+Percentage: 18.5%
+</div>
+
+</div>
+
+<p class="good">
+Status: Normal
+</p>
+
+<p>
+Reason: No major issue
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Savanta</h2>
+
+<div class="number">
+
+<div class="box">
+Count: 80
+</div>
+
+<div class="box">
+Percentage: 12.3%
+</div>
+
+</div>
+
+<p class="review">
+Status: Review
+</p>
+
+<p>
+Reason: Multiple reports
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>Appinio</h2>
+
+<div class="number">
+
+<div class="box">
+Count: 25
+</div>
+
+<div class="box">
+Percentage: 3.8%
+</div>
+
+</div>
+
+<p class="reject">
+Status: Review
+</p>
+
+<p>
+Reason: Inconsistent Answers
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
 
 <footer>
 
@@ -201,41 +282,43 @@ placeholder="🔍 Search Survey...">
 
 </footer>
 
+
+
 <script>
 
-document.getElementById("searchInput").addEventListener("keyup", function(){
 
-let filter=this.value.toUpperCase();
+document.getElementById("search").addEventListener("keyup",function(){
 
-let table=document.getElementById("surveyTable");
+let value=this.value.toLowerCase();
 
-let tr=table.getElementsByTagName("tr");
+let cards=document.querySelectorAll(".card");
 
-for(let i=1;i<tr.length;i++){
 
-let td=tr[i].getElementsByTagName("td")[0];
+cards.forEach(function(card){
 
-if(td){
+let text=card.innerText.toLowerCase();
 
-let txt=td.textContent||td.innerText;
 
-if(txt.toUpperCase().indexOf(filter)>-1){
+if(text.includes(value)){
 
-tr[i].style.display="";
+card.style.display="block";
 
 }else{
 
-tr[i].style.display="none";
+card.style.display="none";
 
 }
 
-}
-
-}
 
 });
 
+
+});
+
+
 </script>
 
+
 </body>
+
 </html>
