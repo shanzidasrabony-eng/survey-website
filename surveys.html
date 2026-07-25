@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survey List</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f4f4;
+}
+
+header{
+background:#0066cc;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+nav{
+background:#004c99;
+padding:12px;
+text-align:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+font-weight:bold;
+}
+
+.container{
+width:90%;
+max-width:1000px;
+margin:30px auto;
+}
+
+#searchInput{
+width:100%;
+padding:12px;
+font-size:16px;
+border:1px solid #ccc;
+border-radius:8px;
+margin-bottom:20px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+th{
+background:#0066cc;
+color:white;
+padding:15px;
+}
+
+td{
+padding:15px;
+border-bottom:1px solid #ddd;
+}
+
+tr:hover{
+background:#f2f8ff;
+}
+
+.reject{
+color:red;
+font-weight:bold;
+}
+
+.good{
+color:green;
+font-weight:bold;
+}
+
+.careful{
+color:orange;
+font-weight:bold;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Survey Reject</h1>
+
+<p>Search survey information easily</p>
+
+</header>
+
+<nav>
+
+<a href="home.html">Home</a>
+
+<a href="surveys.html">Survey List</a>
+
+<a href="index.html">Logout</a>
+
+</nav>
+
+<div class="container">
+
+<input
+type="text"
+id="searchInput"
+placeholder="🔍 Search Survey...">
+
+<table id="surveyTable">
+
+<tr>
+
+<th>Survey</th>
+
+<th>Status</th>
+
+<th>Reason</th>
+
+</tr>
+
+<tr>
+
+<td>Temu Survey</td>
+
+<td class="reject">Reject</td>
+
+<td>High disqualification</td>
+
+</tr>
+
+<tr>
+
+<td>Amazon Survey</td>
+
+<td class="good">Good</td>
+
+<td>Usually completes</td>
+
+</tr>
+
+<tr>
+
+<td>Lottery Survey</td>
+
+<td class="careful">Careful</td>
+
+<td>Profile mismatch</td>
+
+</tr>
+
+<tr>
+
+<td>Casino Survey</td>
+
+<td class="reject">Reject</td>
+
+<td>Very low success rate</td>
+
+</tr>
+
+<tr>
+
+<td>Shopping Survey</td>
+
+<td class="good">Good</td>
+
+<td>Easy to complete</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<footer>
+
+© 2026 Survey Reject
+
+</footer>
+
+<script>
+
+document.getElementById("searchInput").addEventListener("keyup", function(){
+
+let filter=this.value.toUpperCase();
+
+let table=document.getElementById("surveyTable");
+
+let tr=table.getElementsByTagName("tr");
+
+for(let i=1;i<tr.length;i++){
+
+let td=tr[i].getElementsByTagName("td")[0];
+
+if(td){
+
+let txt=td.textContent||td.innerText;
+
+if(txt.toUpperCase().indexOf(filter)>-1){
+
+tr[i].style.display="";
+
+}else{
+
+tr[i].style.display="none";
+
+}
+
+}
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
