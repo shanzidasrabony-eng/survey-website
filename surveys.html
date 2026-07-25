@@ -1,324 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Survey List</title>
+<title>Survey Account List</title>
 
 <style>
-
 body{
-font-family:Arial,sans-serif;
-background:#f4f7fb;
-margin:0;
+    font-family:Arial,sans-serif;
+    background:#f4f6f9;
+    margin:0;
 }
-
-
 header{
-background:linear-gradient(135deg,#0066cc,#003366);
-color:white;
-padding:30px;
-text-align:center;
+    background:#0d6efd;
+    color:#fff;
+    text-align:center;
+    padding:20px;
 }
-
-
-nav{
-background:#003366;
-padding:15px;
-text-align:center;
-}
-
-
-nav a{
-color:white;
-text-decoration:none;
-margin:15px;
-font-weight:bold;
-}
-
-
 .container{
-width:90%;
-max-width:1100px;
-margin:30px auto;
+    width:95%;
+    max-width:1200px;
+    margin:20px auto;
 }
-
-
-.search{
-width:100%;
-padding:15px;
-font-size:17px;
-border-radius:10px;
-border:1px solid #ccc;
+#search{
+    width:100%;
+    padding:12px;
+    font-size:16px;
+    border:2px solid #0d6efd;
+    border-radius:6px;
+    margin-bottom:20px;
 }
-
-
-.card{
-
-background:white;
-margin-top:20px;
-padding:20px;
-border-radius:15px;
-box-shadow:0 5px 15px #ddd;
-
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
 }
-
-
-.card h2{
-color:#0066cc;
+th{
+    background:#0d6efd;
+    color:#fff;
+    padding:12px;
 }
-
-
-.number{
-
-display:flex;
-gap:20px;
-flex-wrap:wrap;
-
+td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
 }
-
-
-.box{
-
-background:#f1f6ff;
-padding:10px;
-border-radius:8px;
-font-weight:bold;
-
+tr:hover{
+    background:#f1f1f1;
 }
-
-
-.reject{
-color:red;
+.rank{
+    font-weight:bold;
+    color:#0d6efd;
 }
-
-
-.review{
-color:orange;
-}
-
-
-.good{
-color:green;
-}
-
-
-footer{
-
-background:#222;
-color:white;
-padding:15px;
-text-align:center;
-margin-top:40px;
-
-}
-
 </style>
 
 </head>
-
-
 <body>
 
-
 <header>
-
-<h1>Survey Reject</h1>
-
-<p>Search survey quality information</p>
-
+<h1>Survey Account Ranking</h1>
+<p>Most Frequent Survey Companies</p>
 </header>
-
-
-<nav>
-
-<a href="home.html">Home</a>
-
-<a href="surveys.html">Survey List</a>
-
-<a href="index.html">Logout</a>
-
-</nav>
-
-
 
 <div class="container">
 
+<input type="text" id="search" placeholder="Search Survey Account...">
 
-<input 
-class="search"
-id="search"
-placeholder="🔍 Search Survey Account...">
+<table id="surveyTable">
 
+<thead>
+<tr>
+<th>Rank</th>
+<th>Survey Account</th>
+<th>Count</th>
+<th>Percentage</th>
+</tr>
+</thead>
 
+<tbody>
 
-<div id="list">
+<tr><td class="rank">1</td><td>GfK</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">2</td><td>Savanta</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">3</td><td>Lucid Marketplace Services</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">4</td><td>Attest Technologies Limited</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">5</td><td>ThinkSprint</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">6</td><td>dataSpring</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">7</td><td>Ugam</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">8</td><td>Wizer</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">9</td><td>OpinionSpark LLC</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">10</td><td>STRAT7</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">11</td><td>QuestionPro</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">12</td><td>Qualtrics</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">13</td><td>Ovation Worldwide Holdings</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">14</td><td>Cobalt Sky</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">15</td><td>Potentia Insight Limited</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">16</td><td>Appinio</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">17</td><td>Bolt Insight LTD</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">18</td><td>HarrisX</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">19</td><td>Intellisurvey</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">20</td><td>Alchemer LLC</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">21</td><td>Sogolytics</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">22</td><td>Qumind Ltd</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">23</td><td>Cloud Research</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">24</td><td>Centiment</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">25</td><td>Big Village Insights</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">26</td><td>Kantar - CEX</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">27</td><td>Kantar</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">28</td><td>SurveyMonkey</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">29</td><td>MARU Group</td><td>--</td><td>--%</td></tr>
+<tr><td class="rank">30</td><td>Russell Research</td><td>--</td><td>--%</td></tr>
 
+</tbody>
 
-<div class="card">
-
-<h2>Lucid Marketplace Services</h2>
-
-<div class="number">
-
-<div class="box">
-Count: 95
-</div>
-
-<div class="box">
-Percentage: 14.6%
-</div>
-
-</div>
-
-<p class="reject">
-Status: Review
-</p>
-
-<p>
-Reason: Poor Quality Open-End
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h2>GfK</h2>
-
-<div class="number">
-
-<div class="box">
-Count: 120
-</div>
-
-<div class="box">
-Percentage: 18.5%
-</div>
+</table>
 
 </div>
-
-<p class="good">
-Status: Normal
-</p>
-
-<p>
-Reason: No major issue
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h2>Savanta</h2>
-
-<div class="number">
-
-<div class="box">
-Count: 80
-</div>
-
-<div class="box">
-Percentage: 12.3%
-</div>
-
-</div>
-
-<p class="review">
-Status: Review
-</p>
-
-<p>
-Reason: Multiple reports
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h2>Appinio</h2>
-
-<div class="number">
-
-<div class="box">
-Count: 25
-</div>
-
-<div class="box">
-Percentage: 3.8%
-</div>
-
-</div>
-
-<p class="reject">
-Status: Review
-</p>
-
-<p>
-Reason: Inconsistent Answers
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-
-<footer>
-
-© 2026 Survey Reject
-
-</footer>
-
-
 
 <script>
+const search=document.getElementById("search");
 
-
-document.getElementById("search").addEventListener("keyup",function(){
+search.addEventListener("keyup",function(){
 
 let value=this.value.toLowerCase();
 
-let cards=document.querySelectorAll(".card");
+let rows=document.querySelectorAll("#surveyTable tbody tr");
 
+rows.forEach(row=>{
 
-cards.forEach(function(card){
-
-let text=card.innerText.toLowerCase();
-
-
-if(text.includes(value)){
-
-card.style.display="block";
-
-}else{
-
-card.style.display="none";
-
-}
-
+row.style.display=row.innerText.toLowerCase().includes(value)?"":"none";
 
 });
 
-
 });
-
-
 </script>
 
-
 </body>
-
 </html>
