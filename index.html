@@ -1,77 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Survey Reject</title>
 
 <style>
-*{
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f6f9;
     margin:0;
     padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
 }
 
-body{
-    background:linear-gradient(135deg,#0f172a,#1e293b);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
-
-.container{
-    width:420px;
-    background:#fff;
-    border-radius:15px;
-    padding:35px;
-    box-shadow:0 0 25px rgba(0,0,0,.3);
+.box{
+    width:350px;
+    background:white;
+    margin:120px auto;
+    padding:30px;
+    text-align:center;
+    border-radius:10px;
+    box-shadow:0 0 10px #ccc;
 }
 
 h1{
-    text-align:center;
-    color:#0f172a;
-    margin-bottom:10px;
-}
-
-p{
-    text-align:center;
-    color:#555;
-    margin-bottom:25px;
+    color:#222;
 }
 
 input{
-    width:100%;
-    padding:14px;
-    margin:10px 0;
+    width:90%;
+    padding:12px;
+    margin:8px;
     border:1px solid #ccc;
-    border-radius:8px;
-    font-size:16px;
+    border-radius:5px;
 }
 
 button{
-    width:100%;
-    padding:14px;
-    margin-top:15px;
-    background:#2563eb;
+    width:95%;
+    padding:12px;
+    background:#222;
     color:white;
     border:none;
-    border-radius:8px;
-    font-size:17px;
+    border-radius:5px;
     cursor:pointer;
-    transition:.3s;
 }
 
 button:hover{
-    background:#1d4ed8;
+    background:#444;
 }
 
-.footer{
-    margin-top:20px;
-    text-align:center;
-    color:#777;
-    font-size:14px;
+#welcome{
+    display:none;
 }
 </style>
 
@@ -79,29 +57,97 @@ button:hover{
 
 <body>
 
-<div class="container">
 
-<h1>Survey Reject</h1>
+<div class="box" id="login">
 
-<p>Find survey companies that may have higher rejection reports from users.</p>
+<h1>SURVEY REJECT</h1>
 
-<form action="surveys.html">
+<p>Enter your details to continue</p>
 
-<input type="text" placeholder="Your Name" required>
+<input id="name" placeholder="Your Name">
 
-<input type="email" placeholder="Email Address" required>
+<input id="email" placeholder="Your Email">
 
-<button type="submit">Enter Website</button>
-
-</form>
-
-<div class="footer">
-
-Made with ❤️ for Survey Users
+<button onclick="login()">Continue</button>
 
 </div>
 
+
+
+<div class="box" id="welcome">
+
+<h1>Welcome 👋</h1>
+
+<h2 id="username"></h2>
+
+<p>
+Find surveys that are not recommended
+and avoid wasting your time.
+</p>
+
+<button onclick="goSurvey()">Go To Survey List</button>
+
 </div>
+
+
+
+<script>
+
+function login(){
+
+let name=document.getElementById("name").value;
+let email=document.getElementById("email").value;
+
+
+if(name=="" || email==""){
+alert("Please enter your name and email");
+return;
+}
+
+
+localStorage.setItem("username",name);
+localStorage.setItem("useremail",email);
+
+
+showWelcome();
+
+}
+
+
+
+function showWelcome(){
+
+let name=localStorage.getItem("username");
+
+document.getElementById("login").style.display="none";
+
+document.getElementById("welcome").style.display="block";
+
+document.getElementById("username").innerHTML="Welcome, "+name;
+
+}
+
+
+
+function goSurvey(){
+
+window.location="survey-list.html";
+
+}
+
+
+
+// Check previous user
+
+if(localStorage.getItem("username")){
+
+showWelcome();
+
+}
+
+
+</script>
+
 
 </body>
 </html>
