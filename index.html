@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,17 +7,23 @@
 
 <title>SurveyGPT Check</title>
 
-<link rel="stylesheet" href="css/style.css">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
 font-family:'Poppins',sans-serif;
 background:#eef4ff;
+color:#333;
 }
 
 header{
@@ -27,6 +34,9 @@ justify-content:space-between;
 align-items:center;
 padding:0 25px;
 color:white;
+position:sticky;
+top:0;
+z-index:999;
 box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
@@ -40,17 +50,41 @@ opacity:.9;
 }
 
 .menu{
-font-size:32px;
+font-size:30px;
 cursor:pointer;
-user-select:none;
+}
+
+.hero{
+
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(135deg,#2563eb,#4f8dfd);
+color:white;
+
+}
+
+.hero h1{
+
+font-size:48px;
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:20px;
+max-width:700px;
+margin:auto;
+line-height:1.8;
+
 }
 
 .container{
-width:100%;
+
 display:flex;
 justify-content:center;
-align-items:center;
-padding:60px 15px;
+padding:60px 20px;
+
 }
 
 .card{
@@ -64,15 +98,19 @@ box-shadow:0 10px 30px rgba(0,0,0,.08);
 }
 
 .card h2{
+
 text-align:center;
 margin-bottom:10px;
 color:#2563eb;
+
 }
 
 .card p{
+
 text-align:center;
 margin-bottom:25px;
 color:#666;
+
 }
 
 input{
@@ -96,6 +134,7 @@ border:none;
 border-radius:10px;
 cursor:pointer;
 font-size:16px;
+transition:.3s;
 
 }
 
@@ -111,13 +150,82 @@ display:none;
 
 }
 
+.stats{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+max-width:1100px;
+margin:40px auto;
+padding:20px;
+
+}
+
+.box{
+
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+transition:.3s;
+
+}
+
+.box:hover{
+
+transform:translateY(-8px);
+
+}
+
+.box h2{
+
+font-size:34px;
+color:#2563eb;
+margin-bottom:10px;
+
+}
+
+.box p{
+
+color:#666;
+
+}
+
+.features{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+max-width:1100px;
+margin:auto;
+padding:20px;
+
+}
+
+.feature{
+
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.feature h3{
+
+color:#2563eb;
+margin-bottom:12px;
+
+}
+
 footer{
 
+margin-top:60px;
 background:#2563eb;
 color:white;
 text-align:center;
-padding:18px;
-margin-top:60px;
+padding:25px;
 
 }
 
@@ -137,25 +245,35 @@ margin-top:60px;
 
 </div>
 
-<div class="menu">
-
-☰
-
-</div>
+<div class="menu">☰</div>
 
 </header>
 
-<div class="container">
+<section class="hero">
+
+<h1>Find Trusted Survey Companies</h1>
+
+<p>
+
+Check survey companies before spending your valuable time.
+Discover reject rates, rewards, and user experiences.
+
+</p>
+
+</section>
+```
+```html
+<section class="container">
 
 <div class="card" id="login">
 
-<h2>Welcome</h2>
+<h2>Welcome 👋</h2>
 
 <p>Please enter your name and email.</p>
 
-<input id="name" placeholder="Your Name">
+<input id="name" type="text" placeholder="Your Name">
 
-<input id="email" placeholder="Your Email">
+<input id="email" type="email" placeholder="Your Email">
 
 <button onclick="login()">Continue</button>
 
@@ -166,102 +284,689 @@ margin-top:60px;
 <h2 id="username"></h2>
 
 <p>
-
-Find surveys that are not recommended before wasting your valuable time.
-
+Welcome to SurveyGPT Check.
+Find trusted survey companies before you waste your valuable time.
 </p>
 
 <button onclick="window.location='survey-list.html'">
-
-Go To Survey List
-
+📋 Go To Survey List
 </button>
 
 </div>
 
+</section>
+
+<section class="stats">
+
+<div class="box">
+<h2>500+</h2>
+<p>Total Surveys</p>
 </div>
+
+<div class="box">
+<h2>150+</h2>
+<p>Companies</p>
+</div>
+
+<div class="box">
+<h2>78%</h2>
+<p>Highest Reject</p>
+</div>
+
+<div class="box">
+<h2>95%</h2>
+<p>Trusted Data</p>
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="feature">
+<h3>🔍 Fast Search</h3>
+<p>Search survey companies instantly.</p>
+</div>
+
+<div class="feature">
+<h3>📊 Reject Database</h3>
+<p>Check reject rates before starting surveys.</p>
+</div>
+
+<div class="feature">
+<h3>💰 Save Time</h3>
+<p>Avoid low-quality surveys and focus on better opportunities.</p>
+</div>
+
+<div class="feature">
+<h3>🌍 Worldwide</h3>
+<p>Survey information from companies around the world.</p>
+</div>
+
+</section>
 
 <footer>
 
 © 2026 SurveyGPT Check | Check Surveys. Save Time.
 
 </footer>
-<script>
+```
+```html
+<section class="container">
 
-// Login
+<div class="card" id="login">
 
-function login(){
+<h2>Welcome 👋</h2>
 
-let name=document.getElementById("name").value.trim();
-let email=document.getElementById("email").value.trim();
+<p>Please enter your name and email.</p>
 
-if(name=="" || email==""){
+<input id="name" type="text" placeholder="Your Name">
 
-alert("Please enter your name and email.");
-return;
+<input id="email" type="email" placeholder="Your Email">
 
-}
+<button onclick="login()">Continue</button>
 
-localStorage.setItem("username",name);
-localStorage.setItem("useremail",email);
+</div>
 
-showWelcome();
+<div class="card" id="welcome">
 
-}
+<h2 id="username"></h2>
 
-// Welcome Screen
+<p>
+Welcome to SurveyGPT Check.
+Find trusted survey companies before you waste your valuable time.
+</p>
 
-function showWelcome(){
+<button onclick="window.location='survey-list.html'">
+📋 Go To Survey List
+</button>
 
-let name=localStorage.getItem("username");
+</div>
 
-document.getElementById("login").style.display="none";
-document.getElementById("welcome").style.display="block";
+</section>
 
-document.getElementById("username").innerHTML="Welcome, "+name+" 👋";
+<section class="stats">
 
-}
+<div class="box">
+<h2>500+</h2>
+<p>Total Surveys</p>
+</div>
 
-// Check Existing User
+<div class="box">
+<h2>150+</h2>
+<p>Companies</p>
+</div>
 
-if(localStorage.getItem("username")){
+<div class="box">
+<h2>78%</h2>
+<p>Highest Reject</p>
+</div>
 
-showWelcome();
+<div class="box">
+<h2>95%</h2>
+<p>Trusted Data</p>
+</div>
 
-}
+</section>
 
-// Sidebar
+<section class="features">
 
-const menu=document.querySelector(".menu");
+<div class="feature">
+<h3>🔍 Fast Search</h3>
+<p>Search survey companies instantly.</p>
+</div>
 
-menu.onclick=function(){
+<div class="feature">
+<h3>📊 Reject Database</h3>
+<p>Check reject rates before starting surveys.</p>
+</div>
 
-let side=document.getElementById("sidebar");
+<div class="feature">
+<h3>💰 Save Time</h3>
+<p>Avoid low-quality surveys and focus on better opportunities.</p>
+</div>
 
-if(side.style.right=="0px"){
+<div class="feature">
+<h3>🌍 Worldwide</h3>
+<p>Survey information from companies around the world.</p>
+</div>
 
-side.style.right="-280px";
+</section>
 
-}else{
+<footer>
 
-side.style.right="0px";
+© 2026 SurveyGPT Check | Check Surveys. Save Time.
 
-}
+</footer>
+```
+```html
+<section class="container">
 
-}
+<div class="card" id="login">
 
-// Logout
+<h2>Welcome 👋</h2>
 
-function logout(){
+<p>Please enter your name and email.</p>
 
-localStorage.clear();
+<input id="name" type="text" placeholder="Your Name">
 
-location.reload();
+<input id="email" type="email" placeholder="Your Email">
 
-}
+<button onclick="login()">Continue</button>
 
-</script>
+</div>
 
+<div class="card" id="welcome">
+
+<h2 id="username"></h2>
+
+<p>
+Welcome to SurveyGPT Check.
+Find trusted survey companies before you waste your valuable time.
+</p>
+
+<button onclick="window.location='survey-list.html'">
+📋 Go To Survey List
+</button>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="box">
+<h2>500+</h2>
+<p>Total Surveys</p>
+</div>
+
+<div class="box">
+<h2>150+</h2>
+<p>Companies</p>
+</div>
+
+<div class="box">
+<h2>78%</h2>
+<p>Highest Reject</p>
+</div>
+
+<div class="box">
+<h2>95%</h2>
+<p>Trusted Data</p>
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="feature">
+<h3>🔍 Fast Search</h3>
+<p>Search survey companies instantly.</p>
+</div>
+
+<div class="feature">
+<h3>📊 Reject Database</h3>
+<p>Check reject rates before starting surveys.</p>
+</div>
+
+<div class="feature">
+<h3>💰 Save Time</h3>
+<p>Avoid low-quality surveys and focus on better opportunities.</p>
+</div>
+
+<div class="feature">
+<h3>🌍 Worldwide</h3>
+<p>Survey information from companies around the world.</p>
+</div>
+
+</section>
+
+<footer>
+
+© 2026 SurveyGPT Check | Check Surveys. Save Time.
+
+</footer>
+```
+```html
+<section class="container">
+
+<div class="card" id="login">
+
+<h2>Welcome 👋</h2>
+
+<p>Please enter your name and email.</p>
+
+<input id="name" type="text" placeholder="Your Name">
+
+<input id="email" type="email" placeholder="Your Email">
+
+<button onclick="login()">Continue</button>
+
+</div>
+
+<div class="card" id="welcome">
+
+<h2 id="username"></h2>
+
+<p>
+Welcome to SurveyGPT Check.
+Find trusted survey companies before you waste your valuable time.
+</p>
+
+<button onclick="window.location='survey-list.html'">
+📋 Go To Survey List
+</button>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="box">
+<h2>500+</h2>
+<p>Total Surveys</p>
+</div>
+
+<div class="box">
+<h2>150+</h2>
+<p>Companies</p>
+</div>
+
+<div class="box">
+<h2>78%</h2>
+<p>Highest Reject</p>
+</div>
+
+<div class="box">
+<h2>95%</h2>
+<p>Trusted Data</p>
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="feature">
+<h3>🔍 Fast Search</h3>
+<p>Search survey companies instantly.</p>
+</div>
+
+<div class="feature">
+<h3>📊 Reject Database</h3>
+<p>Check reject rates before starting surveys.</p>
+</div>
+
+<div class="feature">
+<h3>💰 Save Time</h3>
+<p>Avoid low-quality surveys and focus on better opportunities.</p>
+</div>
+
+<div class="feature">
+<h3>🌍 Worldwide</h3>
+<p>Survey information from companies around the world.</p>
+</div>
+
+</section>
+
+<footer>
+
+© 2026 SurveyGPT Check | Check Surveys. Save Time.
+
+</footer>
+```
+```html
+<section class="container">
+
+<div class="card" id="login">
+
+<h2>Welcome 👋</h2>
+
+<p>Please enter your name and email.</p>
+
+<input id="name" type="text" placeholder="Your Name">
+
+<input id="email" type="email" placeholder="Your Email">
+
+<button onclick="login()">Continue</button>
+
+</div>
+
+<div class="card" id="welcome">
+
+<h2 id="username"></h2>
+
+<p>
+Welcome to SurveyGPT Check.
+Find trusted survey companies before you waste your valuable time.
+</p>
+
+<button onclick="window.location='survey-list.html'">
+📋 Go To Survey List
+</button>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="box">
+<h2>500+</h2>
+<p>Total Surveys</p>
+</div>
+
+<div class="box">
+<h2>150+</h2>
+<p>Companies</p>
+</div>
+
+<div class="box">
+<h2>78%</h2>
+<p>Highest Reject</p>
+</div>
+
+<div class="box">
+<h2>95%</h2>
+<p>Trusted Data</p>
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="feature">
+<h3>🔍 Fast Search</h3>
+<p>Search survey companies instantly.</p>
+</div>
+
+<div class="feature">
+<h3>📊 Reject Database</h3>
+<p>Check reject rates before starting surveys.</p>
+</div>
+
+<div class="feature">
+<h3>💰 Save Time</h3>
+<p>Avoid low-quality surveys and focus on better opportunities.</p>
+</div>
+
+<div class="feature">
+<h3>🌍 Worldwide</h3>
+<p>Survey information from companies around the world.</p>
+</div>
+
+</section>
+
+<footer>
+
+© 2026 SurveyGPT Check | Check Surveys. Save Time.
+
+</footer>
+```
+```html
+<section class="container">
+
+<div class="card" id="login">
+
+<h2>Welcome 👋</h2>
+
+<p>Please enter your name and email.</p>
+
+<input id="name" type="text" placeholder="Your Name">
+
+<input id="email" type="email" placeholder="Your Email">
+
+<button onclick="login()">Continue</button>
+
+</div>
+
+<div class="card" id="welcome">
+
+<h2 id="username"></h2>
+
+<p>
+Welcome to SurveyGPT Check.
+Find trusted survey companies before you waste your valuable time.
+</p>
+
+<button onclick="window.location='survey-list.html'">
+📋 Go To Survey List
+</button>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="box">
+<h2>500+</h2>
+<p>Total Surveys</p>
+</div>
+
+<div class="box">
+<h2>150+</h2>
+<p>Companies</p>
+</div>
+
+<div class="box">
+<h2>78%</h2>
+<p>Highest Reject</p>
+</div>
+
+<div class="box">
+<h2>95%</h2>
+<p>Trusted Data</p>
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="feature">
+<h3>🔍 Fast Search</h3>
+<p>Search survey companies instantly.</p>
+</div>
+
+<div class="feature">
+<h3>📊 Reject Database</h3>
+<p>Check reject rates before starting surveys.</p>
+</div>
+
+<div class="feature">
+<h3>💰 Save Time</h3>
+<p>Avoid low-quality surveys and focus on better opportunities.</p>
+</div>
+
+<div class="feature">
+<h3>🌍 Worldwide</h3>
+<p>Survey information from companies around the world.</p>
+</div>
+
+</section>
+
+<footer>
+
+© 2026 SurveyGPT Check | Check Surveys. Save Time.
+
+</footer>
+```
+```html
+<section class="container">
+
+<div class="card" id="login">
+
+<h2>Welcome 👋</h2>
+
+<p>Please enter your name and email.</p>
+
+<input id="name" type="text" placeholder="Your Name">
+
+<input id="email" type="email" placeholder="Your Email">
+
+<button onclick="login()">Continue</button>
+
+</div>
+
+<div class="card" id="welcome">
+
+<h2 id="username"></h2>
+
+<p>
+Welcome to SurveyGPT Check.
+Find trusted survey companies before you waste your valuable time.
+</p>
+
+<button onclick="window.location='survey-list.html'">
+📋 Go To Survey List
+</button>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="box">
+<h2>500+</h2>
+<p>Total Surveys</p>
+</div>
+
+<div class="box">
+<h2>150+</h2>
+<p>Companies</p>
+</div>
+
+<div class="box">
+<h2>78%</h2>
+<p>Highest Reject</p>
+</div>
+
+<div class="box">
+<h2>95%</h2>
+<p>Trusted Data</p>
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="feature">
+<h3>🔍 Fast Search</h3>
+<p>Search survey companies instantly.</p>
+</div>
+
+<div class="feature">
+<h3>📊 Reject Database</h3>
+<p>Check reject rates before starting surveys.</p>
+</div>
+
+<div class="feature">
+<h3>💰 Save Time</h3>
+<p>Avoid low-quality surveys and focus on better opportunities.</p>
+</div>
+
+<div class="feature">
+<h3>🌍 Worldwide</h3>
+<p>Survey information from companies around the world.</p>
+</div>
+
+</section>
+
+<footer>
+
+© 2026 SurveyGPT Check | Check Surveys. Save Time.
+
+</footer>
+```
+```html
+<section class="container">
+
+<div class="card" id="login">
+
+<h2>Welcome 👋</h2>
+
+<p>Please enter your name and email.</p>
+
+<input id="name" type="text" placeholder="Your Name">
+
+<input id="email" type="email" placeholder="Your Email">
+
+<button onclick="login()">Continue</button>
+
+</div>
+
+<div class="card" id="welcome">
+
+<h2 id="username"></h2>
+
+<p>
+Welcome to SurveyGPT Check.
+Find trusted survey companies before you waste your valuable time.
+</p>
+
+<button onclick="window.location='survey-list.html'">
+📋 Go To Survey List
+</button>
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="box">
+<h2>500+</h2>
+<p>Total Surveys</p>
+</div>
+
+<div class="box">
+<h2>150+</h2>
+<p>Companies</p>
+</div>
+
+<div class="box">
+<h2>78%</h2>
+<p>Highest Reject</p>
+</div>
+
+<div class="box">
+<h2>95%</h2>
+<p>Trusted Data</p>
+</div>
+
+</section>
+
+<section class="features">
+
+<div class="feature">
+<h3>🔍 Fast Search</h3>
+<p>Search survey companies instantly.</p>
+</div>
+
+<div class="feature">
+<h3>📊 Reject Database</h3>
+<p>Check reject rates before starting surveys.</p>
+</div>
+
+<div class="feature">
+<h3>💰 Save Time</h3>
+<p>Avoid low-quality surveys and focus on better opportunities.</p>
+</div>
+
+<div class="feature">
+<h3>🌍 Worldwide</h3>
+<p>Survey information from companies around the world.</p>
+</div>
+
+</section>
+
+<footer>
+
+© 2026 SurveyGPT Check | Check Surveys. Save Time.
+
+</footer>
+```
+```html
 <div id="sidebar" style="
 position:fixed;
 top:0;
@@ -286,21 +991,88 @@ SurveyGPT Check
 
 </div>
 
-<a href="index.html" style="display:block;padding:15px;text-decoration:none;color:#333;border-bottom:1px solid #eee;">🏠 Home</a>
+<a href="index.html" style="display:block;padding:15px;text-decoration:none;color:#333;border-bottom:1px solid #eee;">
+🏠 Home
+</a>
 
-<a href="survey-list.html" style="display:block;padding:15px;text-decoration:none;color:#333;border-bottom:1px solid #eee;">📋 Survey List</a>
+<a href="survey-list.html" style="display:block;padding:15px;text-decoration:none;color:#333;border-bottom:1px solid #eee;">
+📋 Survey List
+</a>
 
-<a href="#" style="display:block;padding:15px;text-decoration:none;color:#333;border-bottom:1px solid #eee;"
-onclick="alert('Name : '+localStorage.getItem('username')+'\nEmail : '+localStorage.getItem('useremail'));">
+<a href="#" onclick="showAccount()" style="display:block;padding:15px;text-decoration:none;color:#333;border-bottom:1px solid #eee;">
 👤 Account
 </a>
 
-<a href="#" style="display:block;padding:15px;text-decoration:none;color:red;"
-onclick="logout()">
+<a href="#" onclick="logout()" style="display:block;padding:15px;text-decoration:none;color:red;">
 🚪 Logout
 </a>
 
 </div>
+```
+```html
+<script>
+
+function login(){
+
+let name=document.getElementById("name").value.trim();
+let email=document.getElementById("email").value.trim();
+
+if(name=="" || email==""){
+alert("Please enter your name and email.");
+return;
+}
+
+localStorage.setItem("username",name);
+localStorage.setItem("useremail",email);
+
+showWelcome();
+
+}
+
+function showWelcome(){
+
+let name=localStorage.getItem("username");
+
+document.getElementById("login").style.display="none";
+document.getElementById("welcome").style.display="block";
+
+document.getElementById("username").innerHTML="Welcome, "+name+" 👋";
+
+}
+
+if(localStorage.getItem("username")){
+showWelcome();
+}
+
+document.querySelector(".menu").onclick=function(){
+
+let side=document.getElementById("sidebar");
+
+if(side.style.right=="0px"){
+side.style.right="-280px";
+}else{
+side.style.right="0px";
+}
+
+}
+
+function showAccount(){
+
+alert(
+"Name: "+localStorage.getItem("username")+
+"\nEmail: "+localStorage.getItem("useremail")
+);
+
+}
+
+function logout(){
+
+localStorage.clear();
+location.reload();
+
+}
+
+</script>
 
 </body>
 </html>
