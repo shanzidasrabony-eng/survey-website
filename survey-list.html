@@ -1,125 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Survey List - SurveyGPT Check</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Survey List | SurveyGPT Check</title>
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f4f7fb;
-    color:#333;
+font-family:Arial,sans-serif;
+background:#f4f7fb;
+color:#333;
 }
-
-
-/* HEADER */
 
 header{
-    background:#2563eb;
-    color:white;
-    padding:20px;
-    text-align:center;
+background:#2563eb;
+color:white;
+padding:25px;
+text-align:center;
 }
 
-header h1{
-    font-size:28px;
+.container{
+width:95%;
+max-width:1200px;
+margin:30px auto;
 }
 
-header p{
-    font-size:14px;
+.search{
+width:100%;
+padding:15px;
+font-size:16px;
+border:1px solid #ddd;
+border-radius:10px;
+margin-bottom:20px;
 }
 
-
-/* SEARCH */
-
-.search-box{
-    width:95%;
-    max-width:900px;
-    margin:25px auto;
+table{
+width:100%;
+background:white;
+border-collapse:collapse;
+box-shadow:0 5px 20px rgba(0,0,0,.1);
 }
 
-.search-box input{
-    width:100%;
-    padding:14px;
-    font-size:16px;
-    border:1px solid #ddd;
-    border-radius:8px;
+th{
+background:#2563eb;
+color:white;
+padding:14px;
 }
 
-
-/* SURVEY LIST */
-
-.survey-list{
-    width:95%;
-    max-width:900px;
-    margin:auto;
+td{
+padding:12px;
+text-align:center;
+border-bottom:1px solid #eee;
 }
 
-
-.survey-item{
-
-    background:white;
-    padding:15px 20px;
-    margin-bottom:10px;
-    border-radius:10px;
-
-    display:flex;
-    align-items:center;
-
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-
-    transition:.3s;
+tr:hover{
+background:#eef4ff;
 }
 
-
-.survey-item:hover{
-    background:#eef5ff;
+.btn{
+background:#2563eb;
+color:white;
+padding:7px 12px;
+text-decoration:none;
+border-radius:7px;
 }
-
-
-.rank{
-
-    width:50px;
-    font-weight:bold;
-    color:#2563eb;
-
-}
-
-
-.company{
-
-    flex:1;
-    font-size:16px;
-
-}
-
-
-.count{
-
-    color:#555;
-
-}
-
-
-/* FOOTER */
-
-footer{
-
-    margin-top:40px;
-    background:#2563eb;
-    color:white;
-    text-align:center;
-    padding:15px;
-
-}
-
 
 </style>
 
@@ -131,134 +85,330 @@ footer{
 
 <header>
 
-<h1>Survey List</h1>
+<h1>📋 Survey Company Database</h1>
 
-<p>Check Surveys. Save Time.</p>
+<p>Check survey quality before spending your time</p>
 
 </header>
 
 
+<div class="container">
 
-<div class="search-box">
 
-<input type="text" id="search" placeholder="Search Survey Company..." onkeyup="searchSurvey()">
+<input 
+class="search"
+id="search"
+onkeyup="searchSurvey()"
+placeholder="Search company...">
+
+
+<table id="surveyTable">
+
+
+<tr>
+<th>Rank</th>
+<th>Company</th>
+<th>Reject</th>
+<th>Difficulty</th>
+<th>Reward</th>
+<th>Time</th>
+<th>Action</th>
+</tr>
+
+
+<tr>
+<td>1</td>
+<td>WALR</td>
+<td>78%</td>
+<td>Hard</td>
+<td>$1.20</td>
+<td>18 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+
+<tr>
+<td>2</td>
+<td>Potentia Insight Limited</td>
+<td>70%</td>
+<td>Hard</td>
+<td>$1.50</td>
+<td>20 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+
+<tr>
+<td>3</td>
+<td>Savanta</td>
+<td>60%</td>
+<td>Medium</td>
+<td>$2.00</td>
+<td>15 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+
+<tr>
+<td>4</td>
+<td>Appinio</td>
+<td>25%</td>
+<td>Easy</td>
+<td>$3.00</td>
+<td>10 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+
+<tr>
+<td>5</td>
+<td>Walnut Unlimited</td>
+<td>65%</td>
+<td>Medium</td>
+<td>$1.80</td>
+<td>15 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+
+<tr>
+<td>6</td>
+<td>Research Clever Ltd</td>
+<td>72%</td>
+<td>Hard</td>
+<td>$1.40</td>
+<td>20 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+
+<tr>
+<td>7</td>
+<td>YouGov</td>
+<td>35%</td>
+<td>Easy</td>
+<td>$2.50</td>
+<td>12 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+
+<tr>
+<td>8</td>
+<td>Ipsos</td>
+<td>50%</td>
+<td>Medium</td>
+<td>$2.20</td>
+<td>15 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+
+<tr>
+<td>9</td>
+<td>Kantar</td>
+<td>55%</td>
+<td>Medium</td>
+<td>$2.00</td>
+<td>15 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+
+<tr>
+<td>10</td>
+<td>Dynata</td>
+<td>68%</td>
+<td>Hard</td>
+<td>$1.30</td>
+<td>18 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+<tr>
+<td>11</td>
+<td>Five Surveys</td>
+<td>45%</td>
+<td>Medium</td>
+<td>$2.00</td>
+<td>12 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+<tr>
+<td>12</td>
+<td>Prolific</td>
+<td>20%</td>
+<td>Easy</td>
+<td>$5.00</td>
+<td>25 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+<tr>
+<td>13</td>
+<td>AttaPoll</td>
+<td>40%</td>
+<td>Easy</td>
+<td>$1.50</td>
+<td>10 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+<tr>
+<td>14</td>
+<td>Toluna</td>
+<td>55%</td>
+<td>Medium</td>
+<td>$1.80</td>
+<td>15 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+<tr>
+<td>15</td>
+<td>LifePoints</td>
+<td>48%</td>
+<td>Medium</td>
+<td>$2.00</td>
+<td>15 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+<tr>
+<td>16</td>
+<td>Survey Junkie</td>
+<td>35%</td>
+<td>Easy</td>
+<td>$2.50</td>
+<td>10 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+<tr>
+<td>17</td>
+<td>Branded Surveys</td>
+<td>45%</td>
+<td>Medium</td>
+<td>$1.70</td>
+<td>15 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+<tr>
+<td>18</td>
+<td>Pinecone Research</td>
+<td>30%</td>
+<td>Easy</td>
+<td>$3.00</td>
+<td>15 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+<tr>
+<td>19</td>
+<td>InboxDollars</td>
+<td>60%</td>
+<td>Hard</td>
+<td>$1.20</td>
+<td>20 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+<tr>
+<td>20</td>
+<td>PrizeRebel</td>
+<td>50%</td>
+<td>Medium</td>
+<td>$1.50</td>
+<td>12 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+<tr>
+<td>21</td>
+<td>Opinion Outpost</td>
+<td>52%</td>
+<td>Medium</td>
+<td>$2.00</td>
+<td>15 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+<tr>
+<td>22</td>
+<td>YouGov Direct</td>
+<td>35%</td>
+<td>Easy</td>
+<td>$2.50</td>
+<td>10 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+<tr>
+<td>23</td>
+<td>CloudResearch</td>
+<td>25%</td>
+<td>Easy</td>
+<td>$4.00</td>
+<td>20 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+<tr>
+<td>24</td>
+<td>SurveyMonkey</td>
+<td>40%</td>
+<td>Medium</td>
+<td>$2.00</td>
+<td>15 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+<tr>
+<td>25</td>
+<td>Qualtrics</td>
+<td>30%</td>
+<td>Easy</td>
+<td>$3.50</td>
+<td>15 Min</td>
+<td><a class="btn" href="survey-details.html">View</a></td>
+</tr>
+
+</table>
 
 </div>
-
-
-
-<div class="survey-list" id="list">
-
-
-<div class="survey-item">
-<span class="rank">1</span>
-<span class="company">WALR</span>
-<span class="count">25</span>
-</div>
-
-
-<div class="survey-item">
-<span class="rank">2</span>
-<span class="company">Potentia Insight Limited</span>
-<span class="count">22</span>
-</div>
-
-
-<div class="survey-item">
-<span class="rank">3</span>
-<span class="company">Savanta</span>
-<span class="count">18</span>
-</div>
-
-
-<div class="survey-item">
-<span class="rank">4</span>
-<span class="company">Appinio</span>
-<span class="count">16</span>
-</div>
-
-
-<div class="survey-item">
-<span class="rank">5</span>
-<span class="company">Walnut Unlimited</span>
-<span class="count">14</span>
-</div>
-
-
-<div class="survey-item">
-<span class="rank">6</span>
-<span class="company">Research Clever Ltd</span>
-<span class="count">10</span>
-</div>
-
-
-<div class="survey-item">
-<span class="rank">7</span>
-<span class="company">Verian</span>
-<span class="count">8</span>
-</div>
-
-
-<div class="survey-item">
-<span class="rank">8</span>
-<span class="company">Ipsos</span>
-<span class="count">7</span>
-</div>
-
-
-<div class="survey-item">
-<span class="rank">9</span>
-<span class="company">YouGov</span>
-<span class="count">5</span>
-</div>
-
-
-</div>
-
-
-
-<footer>
-
-SurveyGPT Check © 2026
-
-</footer>
-
 
 
 <script>
 
-
 function searchSurvey(){
 
-let input=document.getElementById("search").value.toLowerCase();
+let input=document.getElementById("search");
+let filter=input.value.toLowerCase();
 
-let items=document.getElementsByClassName("survey-item");
-
-
-for(let i=0;i<items.length;i++){
-
-let text=items[i].innerText.toLowerCase();
+let rows=document
+.getElementById("surveyTable")
+.getElementsByTagName("tr");
 
 
-if(text.includes(input)){
+for(let i=1;i<rows.length;i++){
 
-items[i].style.display="flex";
+let text=rows[i].innerText.toLowerCase();
 
-}else{
-
-items[i].style.display="none";
-
+if(text.includes(filter)){
+rows[i].style.display="";
+}
+else{
+rows[i].style.display="none";
 }
 
 }
 
-
 }
-
 
 </script>
 
 
-
 </body>
+
 </html>
